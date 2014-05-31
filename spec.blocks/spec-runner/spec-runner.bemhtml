@@ -1,0 +1,16 @@
+block spec-runner {
+    tag: 'script'
+    content: [
+        '(function() {',
+        'typeof modules === "object"?',
+        '  modules.require(["jquery", "mocha", "spec"], function($, mocha) {',
+        '    init(this.global, $, mocha);',
+        '  }) : ',
+        '  init(this, this.jQuery, this.mocha);',
+        'function init(global, $, mocha) {',
+        '  global.mochaPhantomJS? global.mochaPhantomJS.run(done) : mocha.run(done);',
+        '  function done() { $("#mocha").show() }',
+        '}',
+        '}());'
+    ]
+}

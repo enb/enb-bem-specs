@@ -1,0 +1,50 @@
+{
+  "author": "Andrew Abramov <andrewblond@yandex.com>",
+  "name": "enb-bem-specs",
+  "version": "0.0.1",
+  "description": "BEM specs for ENB",
+  "repository": "git://github.com/andrewblond/enb-bem-specs",
+  "homepage": "https://github.com/andrewblond/enb-bem-specs",
+  "bugs": "https://github.com/andrewblond/enb-bem-specs/issues",
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/andrewblond/enb-bem-specs/blob/master/LICENSE"
+  }],
+  "contributors": [
+    {
+      "name": "Andrew Abramov",
+      "email": "andrewblond@yandex.com"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "peerDependencies": {
+    "enb": ">= 0.12.0",
+    "enb-bem-sets": ">= 0.3.3"
+  },
+  "dependencies": {
+    "enb-modules": "0.1.2",
+    "enb-bemxjst": "1.1.1",
+    "enb-borschik": "1.0.4",
+    "vow": "0.4.3",
+    "inherit": "2.2.1",
+    "phantomjs": "1.9.7-8",
+    "mocha-phantomjs": "3.4.1",
+    "bem-core": "git://github.com/bem/bem-core.git#v2.2.2"
+  },
+  "devDependencies": {
+    "enb": ">= 0.12.0",
+    "enb-bem-sets": ">= 0.3.3",
+    "enb-validate-code": "0.0.1",
+    "jshint": "2.5.1",
+    "jscs": "1.4.5"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "jshint . && jscs -c .jscs.js .",
+    "build": "cd examples/silly && enb make specs",
+    "clean": "rm -rf examples/silly/specs && rm -rf examples/silly/.enb/tmp"
+  }
+}
