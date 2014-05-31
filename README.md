@@ -7,25 +7,36 @@ enb-bem-specs [![NPM version](https://badge.fury.io/js/enb-bem-specs.svg)](http:
 -----------------
 
 ```js
-var sets = require('enb-bem-sets');            // Подключаем инструмент для сетов.
-var specsPlugin = require('enb-bem-specs');    // Подключаем плагин для спек.
+var specsSets = require('enb-bem-specs');
 
 module.exports = function (config) {
-    var maker = sets.create('specs', config);  // Создаём конфигуратор сетов
-                                               //  в рамках `specs` таска.
-    var specs = sets.use(specsPlugin, maker);  // Инициализируем плагин
-                                               //  в рамках `specs` таска.
+    var specs = specsSets                      // Создаём конфигуратор сетов
+        .create('specs', config);              //  в рамках `specs` таска.
 
     specs.build({                              // Декларируем сборку и запуск спеков
         destPath: 'desktop.specs',             //  по пути `desktop.specs`
-        levels: getLevels(config)              //  на основе указанных уровней.
+        levels: getDesktopLevels(config)       //  на основе уровней для десктопов.
+    });
+
+    specs.build({                              // Декларируем сборку и запуск спеков
+        destPath: 'touch.specs',               //  по пути `touch.specs`
+        levels: getTouchLevels(config)         //  на основе уровней для тачей.
     });
 };
 
-function getLevels(config) {
+function getDesktopLevels(config) {
     return [
         'common.blocks',
         'desktop.blocks'
+    ].map(function (level) {
+        return config.resolvePath(level);
+    });
+}
+
+function getTouchLevels(config) {
+    return [
+        'common.blocks',
+        'touch.blocks'
     ].map(function (level) {
         return config.resolvePath(level);
     });
