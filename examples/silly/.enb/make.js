@@ -6,17 +6,16 @@ var specsPlugin = require(rootPath);
 module.exports = function (config) {
     var maker = sets.create('specs', config);
     var specs = sets.use(specsPlugin, maker);
-    var levels = getLevels(config);
 
     specs.build({
-        destPath: 'specs',
-        levels: levels
+        destPath: 'desktop.specs',
+        levels: getLevels(config)
     });
 };
 
 function getLevels(config) {
     return [
-        'blocks'
+        'common.blocks'
     ].map(function (level) {
         return config.resolvePath(level);
     });

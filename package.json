@@ -45,6 +45,6 @@
     "test": "npm run lint",
     "lint": "jshint . && jscs -c .jscs.js .",
     "build": "cd examples/silly && enb make specs",
-    "clean": "rm -rf examples/silly/specs && rm -rf examples/silly/.enb/tmp"
+    "clean": "rm -rf examples/silly/desktop.specs && rm -rf examples/silly/.enb/tmp"
   }
 }
