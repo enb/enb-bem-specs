@@ -30,7 +30,6 @@ function getLevels(config) {
         return config.resolvePath(level);
     });
 }
-
 ```
 
 Для сборки и запуска всех наборов спеков, запускаем `specs` таск:
