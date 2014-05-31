@@ -31,7 +31,8 @@
     "inherit": "2.2.1",
     "phantomjs": "1.9.7-8",
     "mocha-phantomjs": "3.4.1",
-    "bem-core": "git://github.com/bem/bem-core.git#v2.2.2"
+    "bem-core": "git://github.com/bem/bem-core.git#v2.2.2",
+    "bem-pr": "git://github.com/narqo/bem-pr.git#0.8.0"
   },
   "devDependencies": {
     "enb": ">= 0.12.0",
