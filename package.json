@@ -27,6 +27,7 @@
     "enb-modules": "0.1.2",
     "enb-bemxjst": "1.1.1",
     "enb-borschik": "1.0.4",
+    "bem-naming": "0.0.3",
     "vow": "0.4.3",
     "inherit": "2.2.1",
     "phantomjs": "1.9.7-8",
