@@ -20,10 +20,10 @@
     "node": ">= 0.10.0"
   },
   "peerDependencies": {
-    "enb": ">= 0.12.0",
-    "enb-bem-sets": ">= 0.3.3"
+    "enb": ">= 0.12.0"
   },
   "dependencies": {
+    "enb-bem-sets": "0.3.6",
     "enb-modules": "0.1.2",
     "enb-bemxjst": "1.1.1",
     "enb-borschik": "1.0.4",
@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "enb": ">= 0.12.0",
-    "enb-bem-sets": ">= 0.3.3",
     "enb-validate-code": "0.0.1",
     "jshint": "2.5.1",
     "jscs": "1.4.5"
