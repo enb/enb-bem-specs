@@ -1,7 +1,7 @@
 modules.define('spec', function(provide) {
 
     describe('block', function() {
-        it('Два умножить на два должно равняться четырем', function() {
+        it('should be equal to four', function() {
             (2*2).should.to.equal(4);
         });
     });
