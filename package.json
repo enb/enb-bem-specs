@@ -25,14 +25,14 @@
   "dependencies": {
     "enb-bem-sets": "0.3.12",
     "enb-modules": "0.1.2",
-    "enb-bemxjst": "1.1.1",
+    "enb-bemxjst": "1.2.0",
     "enb-borschik": "1.0.4",
     "bem-naming": "0.0.3",
-    "vow": "0.4.3",
-    "inherit": "2.2.1",
+    "vow": "0.4.4",
+    "inherit": "2.2.2",
     "phantomjs": "1.9.7-8",
     "mocha-phantomjs": "3.4.1",
-    "bem-core": "git://github.com/bem/bem-core.git#v2.2.2",
+    "bem-core": "git://github.com/bem/bem-core.git#v2.2.3",
     "bem-pr": "git://github.com/narqo/bem-pr.git#0.8.0"
   },
   "devDependencies": {
