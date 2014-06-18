@@ -46,6 +46,6 @@
     "test": "npm run lint",
     "lint": "jshint . && jscs -c .jscs.js .",
     "build": "cd examples/complex && enb make specs && cd ../platform && enb make specs && cd ../source-levels && enb make specs",
-    "clean": "rm -rf examples/complex/desktop.specs && rm -rf examples/complex/.enb/tmp && rm -rf examples/platform/desktop.specs && rm -rf examples/platform/.enb/tmp && rm -rf examples/source-levels/desktop.specs && rm -rf examples/source-levels/.enb/tmp"
+    "clean": "rm -rf examples/*/*specs && rm -rf examples/*/.enb/tmp && rm -rf"
   }
 }
