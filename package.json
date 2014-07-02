@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "enb-bem-sets": "0.3.14",
+    "enb-stylus": "1.0.0",
     "enb-modules": "0.1.2",
     "enb-bemxjst": "1.2.0",
     "enb-borschik": "1.0.4",
