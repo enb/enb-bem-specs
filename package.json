@@ -31,8 +31,7 @@
     "vow": "0.4.4",
     "inherit": "2.2.2",
     "phantomjs": "1.9.7-12",
-    "mocha-phantomjs": "3.4.1",
-    "bem-pr": "git://github.com/narqo/bem-pr.git#0.8.0"
+    "mocha-phantomjs": "3.4.1"
   },
   "devDependencies": {
     "enb": ">= 0.12.0",
