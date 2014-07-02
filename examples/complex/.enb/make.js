@@ -5,7 +5,7 @@ var specsSets = require(rootPath);
 module.exports = function (config) {
     var specs = specsSets.create('specs', config);
 
-    specs.build({
+    specs.configure({
         destPath: 'specs',
         levels: getLevels(config),
         sourceLevels: getSourceLevels(config)

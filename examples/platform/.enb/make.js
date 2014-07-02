@@ -5,13 +5,13 @@ var specsSets = require(rootPath);
 module.exports = function (config) {
     var specs = specsSets.create('specs', config);
 
-    specs.build({
+    specs.configure({
         destPath: 'desktop.specs',
         levels: getDesktopLevels(config),
         sourceLevels: getDesktopSourceLevels(config)
     });
 
-    specs.build({
+    specs.configure({
         destPath: 'touch.specs',
         levels: getTouchLevels(config),
         sourceLevels: getTouchSourceLevels(config)
