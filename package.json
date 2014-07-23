@@ -33,6 +33,7 @@
     "inherit": "2.2.2",
     "phantomjs": "1.9.7-14",
     "mocha-phantomjs": "3.5.0",
+    "istanbul": "0.3.0",
     "borschik-tech-istanbul": "0.1.1"
   },
   "devDependencies": {
@@ -47,7 +48,7 @@
     "test": "npm run lint",
     "lint": "jshint . && jscs -c .jscs.js .",
     "deps": "cd examples && bower i",
-    "build": "cd examples/complex && enb make specs && cd ../platform && enb make specs",
-    "clean": "rm -rf examples/*/*specs && rm -rf examples/*/.enb/tmp && rm -rf"
+    "build": "cd examples/complex && ISTANBUL_COVERAGE=yes enb make specs && cd ../platform && ISTANBUL_COVERAGE=yes enb make specs",
+    "clean": "rm -rf examples/*/*specs && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
   }
 }
