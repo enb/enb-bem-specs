@@ -62,7 +62,7 @@ $ ./node_modules/.bin/enb make specs desktop.specs/block__elem
 $ npm install --save-dev enb-bem-specs
 ```
 
-Для работы модуля требуется зависимость от пакета enb версии 0.12.0 или выше.
+Для работы модуля требуется зависимость от пакета `enb` версии `0.13.0` или выше.
 
 Разработка
 ----------
