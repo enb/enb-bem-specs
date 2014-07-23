@@ -32,7 +32,8 @@
     "vow": "0.4.5",
     "inherit": "2.2.2",
     "phantomjs": "1.9.7-14",
-    "mocha-phantomjs": "3.5.0"
+    "mocha-phantomjs": "3.5.0",
+    "borschik-tech-istanbul": "0.1.1"
   },
   "devDependencies": {
     "enb": ">= 0.13.0",
