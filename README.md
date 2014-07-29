@@ -5,6 +5,17 @@ enb-bem-specs
 
 Инструмент для сборка и запуска БЭМ-спеков для ENB.
 
+
+Установка:
+----------
+
+```
+$ npm install --save-dev enb-bem-specs
+```
+
+Для работы модуля требуется зависимость от пакета `enb-bem-sets` версии `0.4.0` или выше.
+
+
 Как использовать?
 -----------------
 
@@ -56,12 +67,3 @@ $ ./node_modules/.bin/enb make specs
 ```
 $ ./node_modules/.bin/enb make specs desktop.specs/block__elem
 ```
-
-Установка:
-----------
-
-```
-$ npm install --save-dev enb-bem-specs
-```
-
-Для работы модуля требуется зависимость от пакета `enb` версии `0.13.0` или выше.

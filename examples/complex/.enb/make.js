@@ -1,9 +1,10 @@
 var path = require('path');
 var rootPath = path.join(__dirname, '..', '..', '..');
-var specsSets = require(rootPath);
 
 module.exports = function (config) {
-    var specs = specsSets.create('specs', config);
+    config.includeConfig(rootPath);
+
+    var specs = config.module('enb-bem-specs').createConfigurator('specs');
 
     specs.configure({
         destPath: 'specs',
