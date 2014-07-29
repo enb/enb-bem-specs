@@ -3,8 +3,7 @@ enb-bem-specs
 
 [![NPM version](https://badge.fury.io/js/enb-bem-specs.svg)](http://badge.fury.io/js/enb-bem-specs) [![Build Status](https://travis-ci.org/enb-bem/enb-bem-specs.svg?branch=master)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](https://david-dm.org/enb-bem/enb-bem-specs.svg)](https://david-dm.org/andrewblond/enb-bem-specs)
 
-Инструмент для сборка и запуска БЭМ-спеков для ENB.
-
+Инструмент для генерации уровней-сетов из спеков (тестов) БЭМ-блоков с помощью [ENB](http://enb-make.info/).
 
 Установка:
 ----------
@@ -14,7 +13,6 @@ $ npm install --save-dev enb-bem-specs
 ```
 
 Для работы модуля требуется зависимость от пакета `enb-bem-sets` версии `0.4.0` или выше.
-
 
 Как использовать?
 -----------------
