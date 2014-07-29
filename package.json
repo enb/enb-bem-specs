@@ -23,6 +23,7 @@
     "enb-bem-sets": ">= 0.4.0"
   },
   "dependencies": {
+    "enb-bem": "0.1.0-alpha2",
     "enb-bem-pseudo-levels": "0.2.0",
     "enb-stylus": "1.0.0",
     "enb-modules": "0.2.0",
