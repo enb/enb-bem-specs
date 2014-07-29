@@ -1,7 +1,7 @@
 enb-bem-specs
 =============
 
-[![NPM version](https://badge.fury.io/js/enb-bem-specs.svg)](http://badge.fury.io/js/enb-bem-specs) [![Build Status](https://travis-ci.org/andrewblond/enb-bem-specs.svg?branch=master)](https://travis-ci.org/andrewblond/enb-bem-specs) [![Dependency Status](https://david-dm.org/andrewblond/enb-bem-specs.svg)](https://david-dm.org/andrewblond/enb-bem-specs)
+[![NPM version](https://badge.fury.io/js/enb-bem-specs.svg)](http://badge.fury.io/js/enb-bem-specs) [![Build Status](https://travis-ci.org/enb-bem/enb-bem-specs.svg?branch=master)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](https://david-dm.org/enb-bem/enb-bem-specs.svg)](https://david-dm.org/andrewblond/enb-bem-specs)
 
 Инструмент для сборка и запуска БЭМ-спеков для ENB.
 
