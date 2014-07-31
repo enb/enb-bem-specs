@@ -8,7 +8,7 @@ enb-bem-specs
 Установка:
 ----------
 
-```
+```sh
 $ npm install --save-dev enb-bem-specs
 ```
 
@@ -18,50 +18,51 @@ $ npm install --save-dev enb-bem-specs
 -----------------
 
 ```js
-var specsSets = require('enb-bem-specs');
-
 module.exports = function (config) {
-    var specs = specsSets                      // Создаём конфигуратор сетов
-        .create('specs', config);              //  в рамках `specs` таска.
+    config.includeConfig('enb-bem-specs');
 
-    specs.build({                              // Декларируем сборку и запуск спеков
-        destPath: 'desktop.specs',             //  по пути `desktop.specs`
-        levels: getDesktopLevels(config)       //  на основе уровней для десктопов.
-    });
+    var specs = config.module('enb-bem-specs') // Создаём конфигуратор сетов
+        .createConfigurator('specs');          //  в рамках `specs` таска.
 
-    specs.build({                              // Декларируем сборку и запуск спеков
-        destPath: 'touch.specs',               //  по пути `touch.specs`
-        levels: getTouchLevels(config)         //  на основе уровней для тачей.
+    specs.configure({                          // Декларируем сборку и запуск спеков.
+        destPath: 'desktop.specs',             // Указываем путь до уровня-сета.
+        levels: getLevels(config),             // Указываем уровни для БЭМ-сущностей
+                                               //  которых нужно собирать
+                                               //  и запускать спеки.
+        sourceLevels: getSourceLevels(config)  // Указываем уровни которые нужно
+                                               //  подключать при сборке спеков.
     });
 };
 
-function getDesktopLevels(config) {
+function getLevels(config) {
     return [
-        'common.blocks',
-        'desktop.blocks'
+        'blocks'
     ].map(function (level) {
         return config.resolvePath(level);
     });
 }
 
-function getTouchLevels(config) {
+function getSourceLevels(config) {
     return [
-        'common.blocks',
-        'touch.blocks'
+        { path: '../libs/bem-core/common.blocks', check: false },
+        { path: '../libs/bem-pr/spec.blocks', check: false },
+        'blocks'
     ].map(function (level) {
         return config.resolvePath(level);
     });
 }
 ```
 
-Для сборки и запуска всех наборов спеков, запускаем `specs` таск:
+Для сборки и запуска всех наборов спеков, запускаем сборку `desktop.specs` сета:
 
-```
-$ ./node_modules/.bin/enb make specs
+```sh
+$ ./node_modules/.bin/sets make desktop.specs
 ```
 
 Для сборки и запуска спеков, относящихся к конкретной БЭМ-сущности, запускаем:
 
+```sh
+$ ./node_modules/.bin/sets make desktop.specs/block__elem
 ```
-$ ./node_modules/.bin/enb make specs desktop.specs/block__elem
-```
+
+Пример использования можно посмотреть в директории `examples/silly`.
