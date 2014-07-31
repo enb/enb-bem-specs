@@ -52,7 +52,8 @@
     "test": "npm run lint",
     "lint": "jshint . && jscs -c .jscs.js .",
     "deps": "cd examples && bower i",
-    "build": "cd examples/complex && ISTANBUL_COVERAGE=yes sets make set.specs && cd ../platform && ISTANBUL_COVERAGE=yes sets make desktop.specs touch.specs",
+    "build-unit": "cd examples/silly && sets make specs",
+    "build-coverage": "cd examples/silly && ISTANBUL_COVERAGE=yes sets make specs",
     "clean": "rm -rf examples/*/*specs && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
   }
 }

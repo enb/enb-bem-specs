@@ -7,7 +7,7 @@ module.exports = function (config) {
     var specs = config.module('enb-bem-specs').createConfigurator('specs');
 
     specs.configure({
-        destPath: 'set.specs',
+        destPath: 'specs',
         levels: getLevels(config),
         sourceLevels: getSourceLevels(config)
     });
