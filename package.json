@@ -20,7 +20,7 @@
     "node": ">= 0.10.0"
   },
   "peerDependencies": {
-    "enb-bem-sets": ">= 0.5.0"
+    "enb-magic-factory": ">= 0.1.x"
   },
   "dependencies": {
     "bem-naming": "0.1.0",
@@ -41,7 +41,7 @@
     "colors": "0.6.2"
   },
   "devDependencies": {
-    "enb-bem-sets": ">= 0.5.0",
+    "enb-magic-factory": ">= 0.1.x",
     "bower": "1.3.8",
     "enb-validate-code": "0.0.1",
     "jshint": "2.5.2",
@@ -52,8 +52,8 @@
     "test": "npm run lint",
     "lint": "jshint . && jscs -c .jscs.js .",
     "deps": "cd examples && bower i",
-    "build-unit": "cd examples/silly && sets make specs",
-    "build-coverage": "cd examples/silly && ISTANBUL_COVERAGE=yes sets make specs",
+    "build-unit": "enb -d examples/silly make specs",
+    "build-coverage": "ISTANBUL_COVERAGE=yes enb -d examples/silly make specs",
     "clean": "rm -rf examples/*/*specs && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
   }
 }

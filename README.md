@@ -12,7 +12,7 @@ enb-bem-specs
 $ npm install --save-dev enb-bem-specs
 ```
 
-Для работы модуля требуется зависимость от пакета `enb-bem-sets` версии `0.5.0` или выше.
+Для работы модуля требуется зависимость от пакета `enb-magic-factory` версии `0.1.x` или выше.
 
 Как использовать?
 -----------------
@@ -53,16 +53,16 @@ function getSourceLevels(config) {
 }
 ```
 
-Для сборки и запуска всех наборов спеков, запускаем сборку `desktop.specs` сета:
+Для сборки и запуска всех наборов спеков, `specs` таск:
 
 ```sh
-$ ./node_modules/.bin/sets make desktop.specs
+$ ./node_modules/.bin/enb make specs
 ```
 
 Для сборки и запуска спеков, относящихся к конкретной БЭМ-сущности, запускаем:
 
 ```sh
-$ ./node_modules/.bin/sets make desktop.specs/block__elem
+$ ./node_modules/.bin/enb make specs desktop.specs/block__elem
 ```
 
 Пример использования можно посмотреть в директории `examples/silly`.
