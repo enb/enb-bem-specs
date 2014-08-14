@@ -1,7 +1,7 @@
 enb-bem-specs
 =============
 
-[![NPM version](https://badge.fury.io/js/enb-bem-specs.svg)](http://badge.fury.io/js/enb-bem-specs) [![Build Status](https://travis-ci.org/enb-bem/enb-bem-specs.svg?branch=master)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](https://david-dm.org/enb-bem/enb-bem-specs.svg)](https://david-dm.org/andrewblond/enb-bem-specs)
+[![NPM version](http://img.shields.io/npm/v/enb-bem-specs.svg?style=flat)](http://npmjs.org/package/enb-bem-specs) [![Build Status](http://img.shields.io/travis/enb-bem/enb-bem-specs/master.svg?style=flat)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](http://img.shields.io/david/enb-bem/enb-bem-specs.svg?style=flat)](https://david-dm.org/enb-bem/enb-bem-specs)
 
 Инструмент для генерации уровней-сетов из спеков (тестов) БЭМ-блоков с помощью [ENB](http://enb-make.info/).
 
