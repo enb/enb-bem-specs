@@ -23,11 +23,11 @@
     "enb-magic-factory": "0.2.x"
   },
   "dependencies": {
-    "bem-naming": "0.2.1",
+    "bem-naming": "0.3.0",
     "vow": "0.4.5",
     "inherit": "2.2.2",
     "lodash": "2.4.1",
-    "enb-bem": "0.1.0-alpha2",
+    "enb-bem": "0.1.0-beta1",
     "enb-bem-pseudo-levels": "0.2.2",
     "enb-stylus": "https://github.com/tadatuta/enb-stylus/archive/master.tar.gz",
     "enb-modules": "0.2.0",
