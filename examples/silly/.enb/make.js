@@ -8,25 +8,11 @@ module.exports = function (config) {
 
     specs.configure({
         destPath: 'set.specs',
-        levels: getLevels(config),
-        sourceLevels: getSourceLevels(config)
+        levels: ['blocks'],
+        sourceLevels: [
+            { path: '../libs/bem-core/common.blocks', check: false },
+            { path: '../libs/bem-pr/spec.blocks', check: false },
+            { path: 'blocks', check: true }
+        ]
     });
 };
-
-function getLevels(config) {
-    return [
-        'blocks'
-    ].map(function (level) {
-        return config.resolvePath(level);
-    });
-}
-
-function getSourceLevels(config) {
-    return [
-        { path: '../libs/bem-core/common.blocks', check: false },
-        { path: '../libs/bem-pr/spec.blocks', check: false },
-        'blocks'
-    ].map(function (level) {
-        return config.resolvePath(level);
-    });
-}
