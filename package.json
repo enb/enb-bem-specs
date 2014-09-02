@@ -1,7 +1,7 @@
 {
   "author": "Andrew Abramov <andrewblond@yandex.com>",
   "name": "enb-bem-specs",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "BEM specs for ENB",
   "repository": "git://github.com/enb-bem/enb-bem-specs",
   "homepage": "https://github.com/enb-bem/enb-bem-specs",
