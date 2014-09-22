@@ -171,10 +171,10 @@ $ ./node_modules/.bin/enb make <task-name>
 $ ./node_modules/.bin/enb make specs
 ```
 
-### Сборка всех спеков указанной БЭМ-сущности
+### Сборка всех спеков для указанной БЭМ-сущности
 
 Чтобы собрать спеки БЭМ-сущности `block__elem` для уровня-сета `desktop.specs`:
 
 ```sh
-$ ./node_modules/.bin/enb make examples desktop.examples/block__elem
+$ ./node_modules/.bin/enb make specs desktop.specs/block__elem
 ```
