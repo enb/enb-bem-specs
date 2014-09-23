@@ -3,10 +3,9 @@ enb-bem-specs
 
 [![NPM version](http://img.shields.io/npm/v/enb-bem-specs.svg?style=flat)](http://npmjs.org/package/enb-bem-specs) [![Build Status](http://img.shields.io/travis/enb-bem/enb-bem-specs/master.svg?style=flat)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](http://img.shields.io/david/enb-bem/enb-bem-specs.svg?style=flat)](https://david-dm.org/enb-bem/enb-bem-specs)
 
-Инструмент для сборки и запуска спеков (тестов) на клиентский JavaScript. В процессе сборки генерируются
-уровни-сеты из спеков БЭМ-блоков с помощью [ENB](http://enb-make.info/).
+Инструмент для сборки и запуска тестов (спеков) на клиентский JavaScript. В процессе сборки генерируются сеты из тестов БЭМ-блоков с помощью [ENB](http://enb-make.info/).
 
-Установка:
+Установка
 ----------
 
 ```sh
@@ -15,11 +14,10 @@ $ npm install --save-dev enb-bem-specs
 
 Для работы модуля требуется зависимость от пакета `enb-magic-factory` версии `0.2.x` или выше.
 
-Технология `spec.js` на файловой системе
+Технология `spec.js` в файловой системе
 ----------------------------------------
 
-У каждой БЭМ-сущности может быть свой набор спеков, которые будут выполняться независимо от спеков
-остальных БЭМ-сущностей.
+У каждой БЭМ-сущности может быть свой набор тестов, которые будут выполняться независимо от тестов остальных БЭМ-сущностей.
 
 ```sh
 $ tree -a <level>.blocks/<block-name>/
@@ -28,7 +26,7 @@ $ tree -a <level>.blocks/<block-name>/
  └── spec.js
 ```
 
-В результате сборки будет построен уровень-сет из обычных бандлов (`nested`-уровнень), каждый из которых представляет собой:
+В результате сборки будет построен сет из обычных бандлов (`nested`-уровнень), каждый из которых представляет собой:
 
 ```sh
 $ tree -a <set-name>.specs
@@ -36,23 +34,23 @@ $ tree -a <set-name>.specs
 <set-name>.specs
  └── <block-name>/              # Бандл для БЭМ-сущности.
       ├── <block-name>.js       # Клиенский JavaScript,
-                                #  необходимый для выполнения спеков.
-      ├── <block-name>.css      # Стили, необходимые для выполнения спеков.
-      ├── <block-name>.spec.js  # Код спеков.
-      └── <block-name>.html     # Html, необходимый для выполнения спеков.
+                                #  необходимый для выполнения тестов.
+      ├── <block-name>.css      # Стили, необходимые для выполнения тестов.
+      ├── <block-name>.spec.js  # Код тестов.
+      └── <block-name>.html     # HTML, необходимый для выполнения тестов.
                                 #  Включает в себя js, css и spec.js таргеты.
 ```
 
 Frameworks
 ----------
 
-* [`mocha`](https://github.com/visionmedia/mocha)
-* [`should`](https://github.com/shouldjs/should.js)
+* [mocha](https://github.com/visionmedia/mocha)
+* [should](https://github.com/shouldjs/should.js)
 
 Как написать тест?
 ------------------
 
-Тесты пишутся в BDD стиле с использованием асинхронной модульной системы [`YModules`](https://github.com/ymaps/modules).
+Тесты пишутся в BDD-стиле с использованием асинхронной модульной системы [YModules](http://ru.bem.info/tools/bem/modules/).
 Чтобы добавить тест для БЭМ-сущности, нужно в её директории на требуемом уровне переопределения создать файл с названием `<bem-name>.spec.js`.
 
 Пример:
@@ -92,10 +90,9 @@ provide();
 Запуск спеков
 -------------
 
-После сборки уровней-сетов произойдёт запуск спеков для указанных БЭМ-сущностей.
+После сборки сетов произойдёт запуск тестов для указанных БЭМ-сущностей.
 
-Собранные html-файлы для каждой БЭМ-сущности содержат в себе необходимый код стилей и JavaScript, а так же код спеков
-и передаются в [`PhantomJS`](https://github.com/ariya/phantomjs).
+Собранные HTML-файлы для каждой БЭМ-сущности содержат в себе необходимый код стилей и JavaScript, а так же код тестов. Эти HTML-файлы передаются в [PhantomJS](https://github.com/ariya/phantomjs).
 
 ![2014-09-21 23 40 20](https://cloud.githubusercontent.com/assets/2225579/4349827/76e6ade2-41c7-11e4-8d1b-8d1faea381ad.png)
 
@@ -103,11 +100,10 @@ provide();
 -------------
 
 Если при запуске переменная окружения `ISTANBUL_COVERAGE` будет равна значению `yes`,
-то после выполнения спеков в корне появится `coverage.json` файл с иформацией о покрытии исходного
-JavaScript-кода спеками.
+то после выполнения тестов в корне появится файл `coverage.json` с иформацией о покрытии исходного JavaScript-кода тестами.
 
-С помощью команды `report` инструмента [`istanbul`](https://github.com/gotwarlost/istanbul)
-можно составить `html` отчёт на основе `coverage.json` файла:
+С помощью команды `report` инструмента [istanbul](https://github.com/gotwarlost/istanbul)
+можно составить `HTML`-отчёт на основе файла `coverage.json`:
 
 ```sh
 $ istanbul report coverage.json
@@ -118,19 +114,17 @@ $ istanbul report coverage.json
 Как использовать?
 -----------------
 
-В `make`-файле (`.enb/make.js`) нужно подключить `enb-bem-specs` модуль.
-С помощью этого модуля следует создать конфигуратор, указав название таска в рамках которого будет происходить сборка
-уровней сетов из спеков.
+В `make`-файле (`.enb/make.js`) нужно подключить модуль `enb-bem-specs`.
+С помощью этого модуля следует создать конфигуратор, указав название таска, в рамках которого будет происходить сборка уровней сетов из тестов.
 
-Конфигуратор имеет единственный метод `configure`. Его можно вызывать несколько раз, чтобы задекларировать сборку
-нескольких уровней-сетов.
+Конфигуратор имеет единственный метод `configure`. Его можно вызывать несколько раз, чтобы задекларировать сборку нескольких сетов.
 
 ```js
 module.exports = function (config) {
-    config.includeConfig('enb-bem-specs'); // Подключаем `enb-bem-specs` модуль.
+    config.includeConfig('enb-bem-specs'); // Подключаем модуль `enb-bem-specs`.
 
     var examples = config.module('enb-bem-specs') // Создаём конфигуратор сетов
-        .createConfigurator('specs');             //  в рамках `specs` таска.
+        .createConfigurator('specs');             //  в рамках `specs`-таска.
 
     examples.configure({
         destPath: 'desktop.specs',
@@ -146,16 +140,16 @@ module.exports = function (config) {
 
 ### Опции
 
-* *String* `destPath` &mdash;&nbsp;Путь относительный корня до&nbsp;нового уровня-сета со&nbsp;спеками, которые нужно собрать. Обязательная опция.
-* *String[] | Object[]* `levels` &mdash;&nbsp;Уровни, в&nbsp;которых следует искать спеки. Обязательная опция.
-* *String[] | Object[]* `sourceLevels` &mdash;&nbsp;Уровни, в&nbsp;которых следует искать JavaScript код, необходимый для запуска спеков.
-* *String[]* `jsSuffixes` &mdash;&nbsp;Суффиксы `js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['js']`.
-* *String[]* `specSuffixes` &mdash;&nbsp;Суффиксы `spec.js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['spec.js']`.
+* *String* `destPath` &mdash;&nbsp;путь относительно корня до&nbsp;нового сета с&nbsp;тестами, которые нужно собрать. Обязательная опция.
+* *String[] | Object[]* `levels` &mdash;&nbsp;уровни, в&nbsp;которых следует искать тесты. Обязательная опция.
+* *String[] | Object[]* `sourceLevels` &mdash;&nbsp;уровни, в&nbsp;которых следует искать JavaScript-код, необходимый для запуска тестов.
+* *String[]* `jsSuffixes` &mdash;&nbsp;суффиксы `js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['js']`.
+* *String[]* `specSuffixes` &mdash;&nbsp;суффиксы `spec.js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['spec.js']`.
 
 Запуск из консоли
 -----------------
 
-В `make`-файле декларируется таск, в котором будет выполняться сборка уровней-сетов из спеков.
+В `make`-файле декларируется таск, в котором будет выполняться сборка сетов из тестов.
 
 В ENB запуск таска осуществляется с помощью команды `make`, которой передаётся имя таска:
 
@@ -163,17 +157,17 @@ module.exports = function (config) {
 $ ./node_modules/.bin/enb make <task-name>
 ```
 
-### Сборка и запуск всех спеков
+### Сборка и запуск всех тестов
 
-Если сборка уровней-сетов из спеков была задекларарована в `specs`-таске:
+Если сборка сетов из тестов была задекларарована в `specs`-таске:
 
 ```sh
 $ ./node_modules/.bin/enb make specs
 ```
 
-### Сборка всех спеков для указанной БЭМ-сущности
+### Сборка всех тестов для указанной БЭМ-сущности
 
-Чтобы собрать спеки БЭМ-сущности `block__elem` для уровня-сета `desktop.specs`:
+Чтобы собрать тесты БЭМ-сущности `block__elem` для сета `desktop.specs`:
 
 ```sh
 $ ./node_modules/.bin/enb make specs desktop.specs/block__elem
