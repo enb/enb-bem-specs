@@ -6,10 +6,12 @@
   "repository": "git://github.com/enb-bem/enb-bem-specs",
   "homepage": "https://github.com/enb-bem/enb-bem-specs",
   "bugs": "https://github.com/enb-bem/enb-bem-specs/issues",
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://github.com/enb-bem/enb-bem-specs/blob/master/LICENSE"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/enb-bem/enb-bem-specs/blob/master/LICENSE"
+    }
+  ],
   "contributors": [
     {
       "name": "Andrew Abramov",
@@ -20,7 +22,7 @@
     "node": ">= 0.10.0"
   },
   "peerDependencies": {
-    "enb-magic-factory": "0.2.x"
+    "enb-magic-factory": ">= 0.3.0 < 1.0.0"
   },
   "dependencies": {
     "bem-naming": "0.3.0",
@@ -39,10 +41,10 @@
     "istanbul": "0.3.2"
   },
   "devDependencies": {
-    "enb-magic-factory": "0.2.x",
+    "enb-magic-factory": ">= 0.3.0 < 1.0.0",
     "bower": "1.3.12",
-    "jshint": "2.5.6",
-    "jscs": "1.6.2"
+    "jscs": "1.6.2",
+    "jshint": "2.5.6"
   },
   "main": "lib/index.js",
   "scripts": {
