@@ -172,3 +172,8 @@ $ ./node_modules/.bin/enb make specs
 ```sh
 $ ./node_modules/.bin/enb make specs desktop.specs/block__elem
 ```
+
+Лицензия
+--------
+
+© 2014 YANDEX LLC. Код лицензирован [Mozilla Public License 2.0](LICENSE.txt).
