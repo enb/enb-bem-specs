@@ -1,7 +1,7 @@
 enb-bem-specs
 =============
 
-[![NPM version](http://img.shields.io/npm/v/enb-bem-specs.svg?style=flat)](http://npmjs.org/package/enb-bem-specs) [![Build Status](http://img.shields.io/travis/enb-bem/enb-bem-specs/master.svg?style=flat)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](http://img.shields.io/david/enb-bem/enb-bem-specs.svg?style=flat)](https://david-dm.org/enb-bem/enb-bem-specs)
+[![NPM version](https://img.shields.io/npm/v/enb-bem-specs.svg?style=flat)](http://npmjs.org/package/enb-bem-specs) [![Build Status](https://img.shields.io/travis/enb-bem/enb-bem-specs/master.svg?style=flat)](https://travis-ci.org/enb-bem/enb-bem-specs) [![Dependency Status](https://img.shields.io/david/enb-bem/enb-bem-specs.svg?style=flat)](https://david-dm.org/enb-bem/enb-bem-specs)
 
 Инструмент для сборки и запуска тестов (спеков) на клиентский JavaScript. В процессе сборки генерируются сеты из тестов БЭМ-блоков с помощью [ENB](http://enb-make.info/).
 
@@ -50,7 +50,7 @@ Frameworks
 Как написать тест?
 ------------------
 
-Тесты пишутся в BDD-стиле с использованием асинхронной модульной системы [YModules](http://ru.bem.info/tools/bem/modules/).
+Тесты пишутся в BDD-стиле с использованием асинхронной модульной системы [YModules](https://ru.bem.info/tools/bem/modules/).
 Чтобы добавить тест для БЭМ-сущности, нужно в её директории на требуемом уровне переопределения создать файл с названием `<bem-name>.spec.js`.
 
 Пример:
