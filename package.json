@@ -48,7 +48,7 @@
     "lint": "jshint . && jscs -c .jscs.js .",
     "deps": "cd examples && bower i",
     "build-unit": "enb -d examples/silly make __magic__ set.specs",
-    "build-coverage": "ISTANBUL_COVERAGE=yes enb -d examples/silly make __magic__ set.specs",
+    "build-coverage": "ISTANBUL_COVERAGE=yes enb -d examples/silly make __magic__ set.specs && istanbul report text --include examples/silly/coverage.json",
     "clean": "rm -rf examples/*/set.* && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
   }
 }
