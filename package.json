@@ -45,7 +45,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint",
-    "lint": "jshint . && jscs -c .jscs.js .",
+    "lint": "jshint . && jscs .",
     "deps": "cd examples && bower i",
     "build-unit": "enb -d examples/silly make __magic__ set.specs",
     "build-coverage": "ISTANBUL_COVERAGE=yes enb -d examples/silly make __magic__ set.specs && istanbul report text --include examples/silly/coverage.json",
