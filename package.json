@@ -30,7 +30,7 @@
     "enb-stylus": "1.2.3",
     "inherit": "2.2.2",
     "istanbul": "0.3.17",
-    "lodash": "3.10.0",
+    "lodash": "3.10.1",
     "mocha-phantomjs": "3.5.3",
     "phantomjs": "1.9.17",
     "vow": "0.4.10"
