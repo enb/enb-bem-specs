@@ -1,6 +1,17 @@
 История изменений
 =================
 
+0.6.0
+-----
+
+### Крупные изменения
+
+* Добавлена опция `depsTech` для выбора между технологиями `deps` и `deps-old` ([#37]).
+
+### Зависимости
+
+* Модуль `lodash@3.10.0` обновлён до версии `3.10.1`.
+
 0.5.7
 -----
 
@@ -87,6 +98,7 @@
 * Модуль `enb-stylus` обновлён до версии `1.1.5`.
 * Модуль `enb-bem-techs` обновлён до версии `0.1.0-rc`.
 
+[#37]: https://github.com/enb-bem/enb-bem-specs/issues/37
 [#29]: https://github.com/enb-bem/enb-bem-specs/pull/29
 [#25]: https://github.com/enb-bem/enb-bem-specs/issues/25
 [#22]: https://github.com/enb-bem/enb-bem-specs/issues/22
