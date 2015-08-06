@@ -145,6 +145,7 @@ module.exports = function (config) {
 * *String[] | Object[]* `sourceLevels` &mdash;&nbsp;уровни, в&nbsp;которых следует искать JavaScript-код, необходимый для запуска тестов.
 * *String[]* `jsSuffixes` &mdash;&nbsp;суффиксы `js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['js']`.
 * *String[]* `specSuffixes` &mdash;&nbsp;суффиксы `spec.js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['spec.js']`.
+* *String|Function* `depsTech` — технология для раскрытия зависимостей. По умолчанию — `deps-old`.
 
 Запуск из консоли
 -----------------
