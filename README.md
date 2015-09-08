@@ -146,6 +146,7 @@ module.exports = function (config) {
 * *String[]* `jsSuffixes` &mdash;&nbsp;суффиксы `js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['js']`.
 * *String[]* `specSuffixes` &mdash;&nbsp;суффиксы `spec.js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['spec.js']`.
 * *String|Function* `depsTech` — технология для раскрытия зависимостей. По умолчанию — `deps-old`.
+* *Boolean* `langs` — включает в сборку `i18n`.
 
 Запуск из консоли
 -----------------
