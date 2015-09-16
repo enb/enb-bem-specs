@@ -30,10 +30,10 @@
     "enb-modules": "0.2.0",
     "enb-stylus": "2.0.0",
     "inherit": "2.2.2",
-    "istanbul": "0.3.17",
+    "istanbul": "0.3.20",
     "lodash": "3.10.1",
     "mocha-phantomjs": "3.5.3",
-    "phantomjs": "1.9.17",
+    "phantomjs": "1.9.18",
     "vow": "0.4.10"
   },
   "devDependencies": {
