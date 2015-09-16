@@ -45,11 +45,12 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && npm run test-silly",
     "lint": "jshint . && jscs .",
-    "deps": "cd examples && bower i",
-    "build-unit": "enb -d examples/silly make __magic__ set.specs",
-    "build-coverage": "ISTANBUL_COVERAGE=yes enb -d examples/silly make __magic__ set.specs && istanbul report text --include examples/silly/coverage.json",
+    "test-silly": "npm run fixtures && npm run build-examples && npm run clean && npm run build-examples-coverage",
+    "fixtures": "cd examples && bower i",
+    "build-examples": "enb -d examples/silly make __magic__ set.specs",
+    "build-examples-coverage": "ISTANBUL_COVERAGE=yes npm run build-examples && istanbul report text --include examples/silly/coverage.json",
     "clean": "rm -rf examples/*/set.* && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
   }
 }
