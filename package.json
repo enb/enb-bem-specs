@@ -34,7 +34,8 @@
     "lodash": "3.10.1",
     "mocha-phantomjs": "3.5.3",
     "phantomjs": "1.9.18",
-    "vow": "0.4.10"
+    "vow": "0.4.10",
+    "ym": "0.1.2"
   },
   "devDependencies": {
     "enb": ">= 0.13.0 < 1.0.0",
