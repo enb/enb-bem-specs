@@ -26,6 +26,7 @@
     "enb-bem-pseudo-levels": "0.3.0",
     "enb-bem-techs": "2.1.0",
     "enb-bemxjst": "2.1.0",
+    "enb-bh": "1.0.0",
     "enb-borschik": "2.1.0",
     "enb-js": "1.1.0",
     "enb-stylus": "2.1.0",
@@ -47,6 +48,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint && npm run test-silly",
+    "test-bh": "npm run lint &&  enb -d examples/silly make specs-bh",
     "lint": "jshint . && jscs .",
     "test-silly": "npm run clean && npm run fixtures && npm run build-examples && npm run clean && npm run build-examples-coverage",
     "fixtures": "cd examples && bower i",
