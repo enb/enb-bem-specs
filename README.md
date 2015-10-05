@@ -147,6 +147,11 @@ module.exports = function (config) {
 * *String[]* `specSuffixes` &mdash;&nbsp;суффиксы `spec.js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['spec.js']`.
 * *String|Function* `depsTech` — технология для раскрытия зависимостей. По умолчанию — `deps-old`.
 * *Boolean* `langs` — включает в сборку `i18n`.
+* *String[]* `scripts` &mdash;&nbsp;дополнительные js-скрипты, которые необходимо подключить на тестируемую страницу. Например:
+```js
+scripts: ['https://yastatic.net/jquery/1.8.3/jquery.min.js',
+        'https://yastatic.net/lodash/2.4.1/lodash.min.js'],
+```
 
 Запуск из консоли
 -----------------
