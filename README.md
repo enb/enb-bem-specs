@@ -147,6 +147,7 @@ module.exports = function (config) {
 * *String[]* `specSuffixes` &mdash;&nbsp;суффиксы `spec.js`-файлов БЭМ-сущностей. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`['spec.js']`.
 * *String|Function* `depsTech` — технология для раскрытия зависимостей. По умолчанию — `deps-old`.
 * *Boolean* `langs` — включает в сборку `i18n`.
+* *Boolean* `omitModules` — не добавлет в собираемый файл код модульной системы `ym` (нужен для случаев, когда этот код уже подключается в другом файле). По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`false`.
 
 Запуск из консоли
 -----------------
