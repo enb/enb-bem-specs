@@ -152,6 +152,7 @@ module.exports = function (config) {
 scripts: ['https://yastatic.net/jquery/1.8.3/jquery.min.js',
         'https://yastatic.net/lodash/2.4.1/lodash.min.js'],
 ```
+* *Boolean* `includeYM` — добавляет в собираемый файл код модульной системы `ym`. По&nbsp;умолчанию&nbsp;&mdash;&nbsp;`true`.
 
 Запуск из консоли
 -----------------
