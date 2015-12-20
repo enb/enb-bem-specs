@@ -23,10 +23,9 @@ module.exports = function (config) {
         langs: true,
         destPath: 'set.specs',
         levels: ['blocks'],
-        engine: {
+        templateEngine: {
             name: 'bh',
-            tech: require('enb-bh/techs/bh-bundle'),
-            bemjsonTech: require('enb-bh/techs/bemjson-to-html'),
+            tech: 'enb-bh/techs/bh-bundle',
             options: {
                 mimic: 'BEMHTML',
                 bhOptions: {
