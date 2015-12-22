@@ -21,7 +21,7 @@ module.exports = function (config) {
 
     specsBH.configure({
         langs: true,
-        destPath: 'set.specs',
+        destPath: 'bh-set.specs',
         levels: ['blocks'],
         templateEngine: {
             name: 'bh',

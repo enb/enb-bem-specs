@@ -26,7 +26,6 @@
     "enb-bem-pseudo-levels": "0.2.6",
     "enb-bem-techs": "2.0.1",
     "enb-bemxjst": "2.0.2",
-    "enb-bh": "1.0.0",
     "enb-borschik": "2.0.0",
     "enb-modules": "0.2.0",
     "enb-stylus": "2.0.0",
@@ -43,16 +42,16 @@
     "enb-magic-factory": ">= 0.3.0 < 1.0.0",
     "bower": "1.5.2",
     "jscs": "1.13.1",
-    "jshint": "2.8.0"
+    "jshint": "2.8.0",
+    "enb-bh": "1.0.0"
   },
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint && npm run test-silly",
-    "test-bh": "npm run lint &&  enb -d examples/silly make specs-bh",
     "lint": "jshint . && jscs .",
     "test-silly": "npm run clean && npm run fixtures && npm run build-examples && npm run clean && npm run build-examples-coverage",
     "fixtures": "cd examples && bower i",
-    "build-examples": "enb -d examples/silly make __magic__ set.specs",
+    "build-examples": "enb -d examples/silly make __magic__ set.specs && enb -d examples/silly make specs-bh",
     "build-examples-coverage": "ISTANBUL_COVERAGE=yes npm run build-examples && istanbul report text --include examples/silly/coverage.json",
     "clean": "rm -rf examples/*/set.* && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
   }
