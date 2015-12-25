@@ -24,15 +24,16 @@ module.exports = function (config) {
         destPath: 'bh-set.specs',
         levels: ['blocks'],
         templateEngine: {
-            name: 'bh',
-            tech: 'enb-bh/techs/bh-bundle',
-            options: {
+            templateTech: 'enb-bh/techs/bh-bundle',
+            templateOptions: {
                 mimic: 'BEMHTML',
                 bhOptions: {
                     jsAttrName: 'data-bem',
                     jsAttrScheme: 'json'
                 }
             },
+            htmlTech: 'enb-bh/techs/bemjson-to-html',
+            htmlTechOptionNames: { bemjsonFile: 'bemjson', templateFile: 'bh' },
         },
         sourceLevels: [
             { path: '../libs/bem-core/common.blocks', check: false },
