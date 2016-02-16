@@ -24,7 +24,7 @@ module.exports = function (config) {
         destPath: 'bh-set.specs',
         levels: ['blocks'],
         templateEngine: {
-            templateTech: 'enb-bh/techs/bh-bundle',
+            templateTech: require('enb-bh/techs/bh-bundle'),
             templateOptions: {
                 mimic: 'BEMHTML',
                 bhOptions: {
@@ -32,8 +32,8 @@ module.exports = function (config) {
                     jsAttrScheme: 'json'
                 }
             },
-            htmlTech: 'enb-bh/techs/bemjson-to-html',
-            htmlTechOptionNames: { bemjsonFile: 'bemjson', templateFile: 'bh' },
+            htmlTech: require('enb-bh/techs/bemjson-to-html'),
+            htmlTechOptionNames: { bemjsonFile: 'bemjsonFile', templateFile: 'bhFile' },
         },
         sourceLevels: [
             { path: '../libs/bem-core/common.blocks', check: false },
