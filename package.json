@@ -38,17 +38,18 @@
     "ym": "0.1.2"
   },
   "devDependencies": {
-    "enb": ">= 0.13.0 < 2.0.0",
-    "enb-magic-factory": ">= 0.3.0 < 1.0.0",
     "bower": "1.5.2",
-    "jscs": "1.13.1",
-    "jshint": "2.8.0",
-    "enb-bh": "1.2.0"
+    "enb": ">= 0.13.0 < 2.0.0",
+    "enb-bh": "1.2.0",
+    "enb-magic-factory": ">= 0.3.0 < 1.0.0",
+    "eslint": "2.4.0",
+    "eslint-config-pedant": "0.1.1",
+    "jscs": "1.13.1"
   },
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint && npm run test-silly",
-    "lint": "jshint . && jscs .",
+    "lint": "eslint . && jscs .",
     "test-silly": "npm run clean && npm run fixtures && npm run build-examples && npm run clean && npm run build-examples-coverage",
     "fixtures": "cd examples && bower i",
     "build-examples": "enb -d examples/silly make __magic__ set.specs && enb -d examples/silly make specs-bh",
