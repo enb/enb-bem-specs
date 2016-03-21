@@ -140,11 +140,11 @@
 * Модуль `enb-stylus` обновлён до версии `1.1.5`.
 * Модуль `enb-bem-techs` обновлён до версии `0.1.0-rc`.
 
-[#44]: https://github.com/enb-bem/enb-bem-specs/pull/44
-[#39]: https://github.com/enb-bem/enb-bem-specs/issues/39
-[#37]: https://github.com/enb-bem/enb-bem-specs/issues/37
-[#29]: https://github.com/enb-bem/enb-bem-specs/pull/29
-[#25]: https://github.com/enb-bem/enb-bem-specs/issues/25
-[#22]: https://github.com/enb-bem/enb-bem-specs/issues/22
-[#19]: https://github.com/enb-bem/enb-bem-specs/issues/19
-[#14]: https://github.com/enb-bem/enb-bem-specs/issues/14
+[#44]: https://github.com/enb/enb-bem-specs/pull/44
+[#39]: https://github.com/enb/enb-bem-specs/issues/39
+[#37]: https://github.com/enb/enb-bem-specs/issues/37
+[#29]: https://github.com/enb/enb-bem-specs/pull/29
+[#25]: https://github.com/enb/enb-bem-specs/issues/25
+[#22]: https://github.com/enb/enb-bem-specs/issues/22
+[#19]: https://github.com/enb/enb-bem-specs/issues/19
+[#14]: https://github.com/enb/enb-bem-specs/issues/14

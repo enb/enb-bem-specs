@@ -3,13 +3,13 @@
   "name": "enb-bem-specs",
   "version": "0.8.0",
   "description": "BEM specs for ENB",
-  "repository": "git://github.com/enb-bem/enb-bem-specs",
-  "homepage": "https://github.com/enb-bem/enb-bem-specs",
-  "bugs": "https://github.com/enb-bem/enb-bem-specs/issues",
+  "repository": "git://github.com/enb/enb-bem-specs",
+  "homepage": "https://github.com/enb/enb-bem-specs",
+  "bugs": "https://github.com/enb/enb-bem-specs/issues",
   "licenses": [
     {
       "type": "MPL-2.0",
-      "url": "https://github.com/enb-bem/enb-bem-specs/blob/master/LICENSE.txt"
+      "url": "https://github.com/enb/enb-bem-specs/blob/master/LICENSE.txt"
     }
   ],
   "engines": {
