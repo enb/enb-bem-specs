@@ -58,8 +58,8 @@ Frameworks
 ```js
 modules.define(
     'spec',
-    ['button', 'i-bem__dom', 'BEMHTML'],
-    function(provide, Button, BEMDOM, BEMHTML) {
+    ['button', 'i-bem__dom', 'jquery', 'BEMHTML'],
+    function(provide, Button, BEMDOM, $, BEMHTML) {
 
 describe('button', function() {
     var button;
