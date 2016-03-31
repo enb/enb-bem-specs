@@ -15,6 +15,10 @@
                         href: '<%= name %>.css', rel: 'stylesheet'
                     }
                 },
+                {
+                    tag: 'script',
+                    attrs: { src: 'https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js' }
+                },
                 <% _.forEach(scripts, function(script) { %>
                 {
                     tag: 'script',
