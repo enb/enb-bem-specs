@@ -2,7 +2,7 @@
     "name": "enb-bem-specs-examples",
     "private": true,
     "dependencies": {
-        "bem-core": "2.8.0",
+        "bem-core": "2.9.0",
         "bem-pr": "0.12.0"
     }
 }
