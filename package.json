@@ -22,6 +22,8 @@
   "dependencies": {
     "bem-naming": "1.0.1",
     "borschik-tech-istanbul": "0.3.0",
+    "electron-mocha": "^2.2.0",
+    "electron-prebuilt": "^1.2.1",
     "enb-bem-i18n": "1.1.1",
     "enb-bem-pseudo-levels": "0.4.0",
     "enb-bem-techs": "2.2.1",
