@@ -38,14 +38,14 @@
     "ym": "0.1.2"
   },
   "devDependencies": {
-    "bower": "1.7.9",
+    "bower": "^1.7.9",
     "enb": ">= 0.13.0 < 2.0.0",
-    "enb-bh": "1.2.0",
+    "enb-bh": "^1.2.0",
     "enb-magic-factory": ">= 0.3.0 < 1.0.0",
     "enb-postcss": "^1.1.0",
-    "eslint": "3.5.0",
-    "eslint-config-pedant": "0.8.0",
-    "jscs": "3.0.7",
+    "eslint": "^3.5.0",
+    "eslint-config-pedant": "^0.8.0",
+    "jscs": "^3.0.7",
     "postcss-import": "^8.1.2"
   },
   "main": "lib/index.js",
