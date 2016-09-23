@@ -41,4 +41,25 @@ module.exports = function (config) {
             { path: 'blocks', check: true }
         ]
     });
+
+    var specsPostCSS = config.module('enb-bem-specs').createConfigurator('specs-postcss');
+
+    specsPostCSS.configure({
+        langs: true,
+        destPath: 'postcss-set.specs',
+        levels: ['blocks'],
+        cssEngine: {
+            tech: require('enb-postcss/techs/enb-postcss'),
+            options: {
+                plugins: [
+                    require('postcss-import')()
+                ]
+            }
+        },
+        sourceLevels: [
+            { path: '../libs/bem-core/common.blocks', check: false },
+            { path: '../libs/bem-pr/spec.blocks', check: false },
+            { path: 'blocks', check: true }
+        ]
+    });
 };
