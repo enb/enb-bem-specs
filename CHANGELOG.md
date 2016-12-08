@@ -1,6 +1,13 @@
 История изменений
 =================
 
+0.11.0
+------
+
+* Добавлена опция `schemeBuilder` (@dmkoval [#62]).
+
+[#62]: https://github.com/enb/enb-bem-specs/pull/62
+
 0.10.0
 -----
 
