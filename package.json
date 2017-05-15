@@ -22,8 +22,6 @@
   "dependencies": {
     "bem-naming": "1.0.1",
     "borschik-tech-istanbul": "0.3.0",
-    "electron-mocha": "^2.2.0",
-    "electron-prebuilt": "^1.2.1",
     "enb-bem-i18n": "1.1.1",
     "enb-bem-pseudo-levels": "0.4.0",
     "enb-bem-techs": "2.2.1",
@@ -35,13 +33,10 @@
     "inherit": "2.2.6",
     "istanbul": "0.4.5",
     "lodash": "4.16.1",
-    "mocha-phantomjs": "3.5.3",
-    "phantomjs": "1.9.20",
     "vow": "0.4.12",
     "ym": "0.1.2"
   },
   "devDependencies": {
-    "bower": "^1.7.9",
     "enb": ">= 0.13.0 < 2.0.0",
     "enb-bh": "^1.2.0",
     "enb-magic-factory": ">= 0.3.0 < 1.0.0",
@@ -53,12 +48,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "npm run lint && npm run test-silly",
-    "lint": "eslint . && jscs .",
-    "test-silly": "npm run clean && npm run fixtures && npm run build-examples && npm run clean && npm run build-examples-coverage",
-    "fixtures": "cd examples && bower i",
-    "build-examples": "enb -d examples/silly make __magic__ set.specs && enb -d examples/silly make specs-bh && enb -d examples/silly make specs-postcss",
-    "build-examples-coverage": "ISTANBUL_COVERAGE=yes npm run build-examples && istanbul report text --include examples/silly/coverage.json",
-    "clean": "rm -rf examples/*/set.* && rm -rf examples/*/.enb/tmp && rm -rf examples/*/coverage.json"
+    "test": "npm run lint",
+    "lint": "eslint . && jscs ."
   }
 }
