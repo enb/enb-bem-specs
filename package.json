@@ -30,6 +30,7 @@
     "enb-bemxjst": "2.2.0",
     "enb-borschik": "2.4.0",
     "enb-js": "1.1.0",
+    "enb-source-map": "^1.10.0",
     "enb-stylus": "2.4.0",
     "inherit": "2.2.6",
     "istanbul": "0.4.5",

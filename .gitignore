@@ -1,4 +1,5 @@
 node_modules
+npm-debug.log*
 examples/libs
 examples/*/.enb/tmp
 examples/*/__coverage*
